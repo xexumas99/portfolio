@@ -1,0 +1,97 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experience = [
+  {
+    date: "Julio 2023 - Actualidad",
+    title: "Desarrollador Fullstack en Token City S.L. - Madrid",
+    description: `Actualmente, mi trabajo en Token City consiste en el desarrollo desde 0 y mantenimiento de una plataforma de gestión de tokens; 
+      Y de una plataforma de inversion cuyos proyectos pueden ser tokenizados.`,
+    skills: [
+      {
+        name: "Vue.js",
+        icon: "https://cdn.svgporn.com/logos/vue.svg",
+      },
+      {
+        name: "Nuxt.js",
+        icon: "https://cdn.svgporn.com/logos/nuxt-icon.svg",
+      },
+      {
+        name: "Yii2",
+        icon: "https://cdn.svgporn.com/logos/yii.svg",
+      },
+      {
+        name: "Docker",
+        icon: "https://cdn.svgporn.com/logos/docker-icon.svg",
+      },
+      {
+        name: "MySql",
+        icon: "https://cdn.svgporn.com/logos/mysql-icon.svg",
+      },
+    ],
+  },
+  {
+    date: "Abril 2021 - Julio 2023",
+    title: "Desarrollador Fullstack en Europe Language Jobs S.L. - Barcelona",
+    description: `Mi trabajo en Europe Language Jobs consistió en el mantenimiento y desarrollo de nuevas funcionalidades
+     para una plataforma de empleo especializada en posiciones para expatriados en Europa. Con el tiempo, mi rol fue evolucionando, creando
+     la aplicación movil GoPlaces, junto otros proyectos internos.`,
+    skills: [
+      {
+        name: "Vue.js",
+        icon: "https://cdn.svgporn.com/logos/vue.svg",
+      },
+      {
+        name: "Flutter",
+        icon: "https://cdn.svgporn.com/logos/flutter.svg",
+      },
+      {
+        name: "Laravel",
+        icon: "https://cdn.svgporn.com/logos/laravel.svg",
+      },
+      {
+        name: "Node.js",
+        icon: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+      },
+      {
+        name: "MySql",
+        icon: "https://cdn.svgporn.com/logos/mysql-icon.svg",
+      },
+      {
+        name: "Firebase",
+        icon: "https://cdn.svgporn.com/logos/firebase.svg",
+      },
+    ],
+  },
+  {
+    date: "Junio 2020 - Septiembre 2020",
+    title: "Desarrollador Web en Smartloto S.L. - Alicante",
+    description: `Durante mi estancia en smartloto S.L. desarrollé junto con un compañero el backoffice de la empresa 
+    y un proyecto Node que hace uso del blockchain NEM para crear apostillas.`,
+    skills: [
+      {
+        name: "Laravel",
+        icon: "https://cdn.svgporn.com/logos/laravel.svg",
+      },
+      {
+        name: "Node.js",
+        icon: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+      },
+      {
+        name: "MySql",
+        icon: "https://cdn.svgporn.com/logos/mysql-icon.svg",
+      },
+    ],
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">
+  {
+    experience.map((item) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...item} />
+      </li>
+    ))
+  }
+</ol>

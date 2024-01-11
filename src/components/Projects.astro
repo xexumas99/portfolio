@@ -1,0 +1,122 @@
+---
+import TechPills from "./TechPills.astro";
+const projects = [
+  {
+    title: "Undecimo Backoffice",
+    description: `Desarrollo de una página de administración para el control de los décimos de lotería apostillados 
+      sobre la blockchain NEM, realizada en Laravel con servicios en Node.`,
+    skills: [
+      {
+        name: "Laravel",
+        icon: "https://cdn.svgporn.com/logos/laravel.svg",
+      },
+      {
+        name: "Node",
+        icon: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+      },
+      {
+        name: "Mysql",
+        icon: "https://cdn.svgporn.com/logos/mysql-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "GoPlaces App",
+    description: `Una aplicación móvil ligera pero potente para encontrar los mejores lugares para trabajar en Europa. 
+    Desarrollada en Flutter para Android e IOS.`,
+    link: {
+      url: "https://apps.apple.com/us/app/goplaces-job-search-abroad/id1618894216",
+      text: "Descargar en App Store",
+    },
+    skills: [
+      {
+        name: "Flutter",
+        icon: "https://cdn.svgporn.com/logos/flutter.svg",
+      },
+      {
+        name: "Node",
+        icon: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+      },
+      {
+        name: "Mysql",
+        icon: "https://cdn.svgporn.com/logos/mysql-icon.svg",
+      },
+    ],
+  },
+  {
+    title: "Colors",
+    description: `Un pequeño proyecto hecho en Laravel y Vue que obtiene el color más dominante de una imagen, 
+    también intenta adivinar su nombre.`,
+    link: {
+      url: "https://github.com/xexumas99/colores",
+      text: "Ver en Github",
+    },
+    skills: [
+      {
+        name: "Laravel",
+        icon: "https://cdn.svgporn.com/logos/laravel.svg",
+      },
+      {
+        name: "Vue.js",
+        icon: "https://cdn.svgporn.com/logos/vue.svg",
+      },
+    ],
+  },
+  {
+    title: "Teacher At Home",
+    description: `Mi proyecto final de carrera en la universidad, es todo un entorno, con una app móvil, 
+    página de backoffice, API pública y una web.`,
+    link: {
+      url: "https://drive.google.com/file/d/1Tmg_ReL3FESgQXHian3PD3jmQMjYl8A0/view",
+      text: "Ver Paper",
+    },
+    skills: [
+      {
+        name: "Flutter",
+        icon: "https://cdn.svgporn.com/logos/flutter.svg",
+      },
+      {
+        name: "Vue.js",
+        icon: "https://cdn.svgporn.com/logos/vue.svg",
+      },
+      {
+        name: "Node",
+        icon: "https://cdn.svgporn.com/logos/nodejs-icon.svg",
+      },
+      {
+        name: "React.js",
+        icon: "https://cdn.svgporn.com/logos/react.svg",
+      },
+      {
+        name: "Svelte",
+        icon: "https://cdn.svgporn.com/logos/svelte-icon.svg",
+      },
+      {
+        name: "Firebase",
+        icon: "https://cdn.svgporn.com/logos/firebase.svg",
+      },
+    ],
+  },
+];
+---
+
+{
+  projects.map(({ title, description, link, skills }) => (
+    <article class="pb-5">
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+
+      <TechPills tags={skills} />
+      {link && (
+        <a
+          href={link.url}
+          class="text-lg text-accent text-pretty"
+          target="_blank"
+          rel="noopener"
+        >
+          {link.text}
+        </a>
+      )}
+    </article>
+  ))
+}
